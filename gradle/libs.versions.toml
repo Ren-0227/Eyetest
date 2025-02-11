@@ -1,0 +1,38 @@
+[versions]
+agp = "8.8.0"                        # Android Gradle Plugin 最新版本
+kotlin = "2.0.0"                     # Kotlin 最新版本（请确认你的项目支持 Kotlin 2.0）
+coreKtx = "1.15.0"                   # Android 核心库（KTX 扩展）
+junit = "4.13.2"                     # JUnit 单元测试框架
+junitVersion = "1.2.1"               # AndroidX 扩展的 JUnit 测试
+espressoCore = "3.6.1"               # Espresso 测试库
+lifecycleRuntimeKtx = "2.8.7"        # Lifecycle KTX 库
+activityCompose = "1.10.0"           # Compose 兼容的 Activity
+composeBom = "2024.04.01"            # Jetpack Compose BOM（控制 Jetpack Compose 依赖的版本）
+
+[libraries]
+# Android KTX
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+# 单元测试和 Espresso UI 测试框架
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+
+# Jetpack Lifecycle 和 Activity
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+
+# Jetpack Compose
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" } # Android Gradle Plugin
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

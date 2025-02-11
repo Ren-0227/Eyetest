@@ -1,0 +1,24 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- 按钮 -->
+    <Button
+        android:id="@+id/show_e_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示 E" />
+
+    <!-- 用于显示 "E" 的 TextView -->
+    <TextView
+        android:id="@+id/display_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="100sp"
+        android:layout_marginTop="20dp" />
+    </LinearLayout>
